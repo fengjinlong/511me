@@ -10,40 +10,26 @@
           class="demo-tabs"
           @tab-click="handleClick"
         >
-          <el-tab-pane
-            style="width: 124px"
-            label="Liked Me"
-            name="1"
-          ></el-tab-pane>
+          <el-tab-pane label="Liked Me" name="1">
+            <List v-for="ele of arr" :key="ele" />
+          </el-tab-pane>
           <el-tab-pane label="My Likes" name="2"></el-tab-pane>
           <el-tab-pane label="Visitors" name="3"></el-tab-pane>
-          <el-tab-pane label="Block list" name="4"> </el-tab-pane>
+          <el-tab-pane label="Block list" name="4">
+            <BlackList />
+          </el-tab-pane>
         </el-tabs>
       </div>
-      <List v-for="ele of arr" :key="ele" />
-      <div class="pagination">
+
+      <!-- <div class="pagination">
         <el-button
           ><el-icon class="el-icon--left"><ArrowLeft /></el-icon>Prev</el-button
         >
         <el-button>
           Next<el-icon class="el-icon--right"><ArrowRight /></el-icon>
         </el-button>
-      </div>
+      </div> -->
     </div>
-    <el-footer>
-      <div class="footer">
-        <div class="footer-left">
-          <div class="logo"></div>
-        </div>
-        <div class="footer-right">
-          <ul>
-            <li>About us</li>
-            <li>Terms of use</li>
-            <li style="margin-right: 169px">Privacy policy</li>
-          </ul>
-        </div>
-      </div>
-    </el-footer>
   </div>
 </template>
 <script setup>
@@ -51,6 +37,7 @@ import { computed, ref } from "vue";
 // import { useStore } from "vuex";
 import Header from "../Home/Header.vue";
 import List from "./list.vue";
+import BlackList from "./blackList.vue";
 import { Search, ArrowRight, ArrowLeft } from "@element-plus/icons-vue";
 // const store = useStore();
 const arr = [1, 1, 1, 1];
@@ -64,7 +51,7 @@ const handleClick = (tab, event) => {
   min-width: 1080px;
 
   .items {
-    width: 731px;
+    width: 1080px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +60,7 @@ const handleClick = (tab, event) => {
     .tabdiv {
       width: 100%;
       position: relative;
-      height: 45px;
+      height: 59px;
       background: #f4f4f4;
       border: 1px solid #dfdfdf;
       margin-bottom: 25px;
@@ -92,16 +79,16 @@ const handleClick = (tab, event) => {
       }
       .demo-tabs {
         width: 100%;
-        height: 45px;
+        height: 59px;
         background: #f4f4f4;
         :deep(.el-tabs__item) {
-          width: 124px;
-          height: 45px;
+          width: 200px;
+          height: 59px;
           font-size: 14px;
           font-family: Arial-BoldMT, Arial;
           font-weight: normal;
           color: #b60038;
-          line-height: 45px;
+          line-height: 59px;
           text-align: center;
           // &.is-active::after {
           //   content: "";
@@ -137,46 +124,6 @@ const handleClick = (tab, event) => {
       }
       .el-icon--left {
         margin-right: 18px;
-      }
-    }
-  }
-  footer {
-    width: 100%;
-    height: 118px;
-    background: #fc3159;
-
-    .footer {
-      margin: 34px auto 0;
-      height: 118px;
-      .footer-left {
-        .logo {
-          width: 110px;
-          height: 33px;
-          background: url(../../assets/index/logo.png) no-repeat;
-          background-size: cover;
-          margin: 41px 68px;
-          float: left;
-        }
-      }
-
-      .footer-right {
-        float: right;
-        height: 45px;
-        margin: 51px 0;
-        font-weight: normal;
-        color: #ffffff;
-        line-height: 16px;
-
-        font-size: 14px;
-        font-family: Arial-BoldMT, Arial;
-        font-weight: normal;
-
-        ul {
-          li {
-            margin: 0 28px;
-            display: inline;
-          }
-        }
       }
     }
   }

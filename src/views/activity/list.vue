@@ -9,7 +9,7 @@
         <img class="hot" src="../../assets/home/hot.png" alt="" />
       </div>
       <div class="f1">Female / ID: 1729063</div>
-      <div class="f1 f2">Earns $ 30000- $ 450 Earns $ 30000- $ 450</div>
+      <div class="f1 f2">Earns $ 30000- $ 450 Living in China-beijing</div>
       <div class="f3">
         I am 48 years old and 162cm tall in Beijing. I am in a relationship for
         the purpose of getting married, and I am looking for a date to return to
@@ -31,58 +31,57 @@
 <style lang="scss" scoped>
 .item {
   width: 100%;
-  height: 128px;
+  height: 189px;
   display: flex;
-  margin-bottom: 19px;
+  margin-bottom: 28px;
   position: relative;
 
   .img1 {
-    flex: 0 0 128px;
-    height: 128px;
+    flex: 0 0 189px;
+    height: 189px;
   }
   .font {
     flex: 1;
-    padding-left: 50px;
+    padding-left: 41px;
     .name {
       overflow-wrap: break-word;
       color: rgba(0, 0, 0, 1);
-      font-size: 24px;
+      // font-size: 24px;
       font-family: Arial-BoldMT;
-      font-weight: NaN;
       text-align: left;
       white-space: nowrap;
       line-height: 28px;
       display: flex;
-      margin-bottom: 11px;
+      margin-bottom: 16px;
       align-items: center;
       span {
-        font-size: 20px;
+        font-size: 30px;
         font-family: Arial-BoldMT, Arial;
         font-weight: normal;
         color: #000000;
-        line-height: 24px;
+        line-height: 34px;
       }
       .vip {
-        width: 25px;
-        height: 15px;
-        margin: 0 0 0 9px;
+        width: 36.5px;
+        height: 18.2px;
+        margin: 0 0 0 13px;
       }
       .hot {
-        width: 11px;
-        height: 12px;
-        margin: 0 0 0 7px;
+        width: 15.7px;
+        height: 18.2px;
+        margin: 0 0 0 10px;
       }
     }
     .f1 {
       overflow-wrap: break-word;
       text-align: left;
       white-space: nowrap;
-      margin-bottom: 11px;
+      margin-bottom: 14px;
 
-      font-size: 14px;
+      font-size: 22px;
       font-family: ArialMT;
       color: #999999;
-      line-height: 16px;
+      line-height: 26px;
     }
     .f3 {
       color: #666;
@@ -92,15 +91,15 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
 
-      height: 45px;
-      font-size: 14px;
+      height: 66px;
+      font-size: 22px;
       font-family: PingFangSC-Regular, PingFang SC;
       font-weight: 400;
       color: #666666;
-      line-height: 21px;
+      line-height: 32px;
     }
     .f1.f2 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -112,31 +111,31 @@
   top: 0;
   right: 0;
   div {
-    width: 95px;
-    height: 25px;
+    width: 138px;
+    height: 38px;
     background: #ffffff;
-    border-radius: 3px;
+    border-radius: 4px;
     border: 1px solid #b60038;
 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 11px;
+    margin-bottom: 16px;
     img {
-      width: 18px;
-      height: 16px;
-      margin-right: 18px;
+      width: 26.58px;
+      height: 24px;
+      margin-right: 14px;
     }
     img.hi {
-      width: 17px;
-      height: 17px;
+      width: 25.7px;
+      height: 25px;
     }
     span {
+      font-size: 20px;
       font-family: ArialMT;
       color: #b60038;
-      font-size: 12px;
-      line-height: 14px;
+      line-height: 23px;
     }
   }
 }

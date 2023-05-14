@@ -71,7 +71,7 @@
       </div>
     </div>
     <!-- 3 -->
-    <div v-if="status === 1" class="s1">
+    <div v-if="status === 3" class="s1">
       <p class="t1">Profile Verification</p>
       <p class="t2">
         You have 1 document waiting to be verified. We will process this
@@ -79,7 +79,7 @@
       </p>
     </div>
     <!-- 4 -->
-    <div v-if="status === 1" class="s1">
+    <div v-if="status === 3" class="s1">
       <p class="t1">Phone number Verification</p>
       <p class="t2">
         You have 1 document waiting to be verified. We will process this
@@ -87,22 +87,27 @@
       </p>
     </div>
     <!-- 5 -->
-    <div v-if="status === 1" class="s1">
+    <div v-if="status === 11" class="s1 s">
       <p class="t1">Phone number Verification</p>
-      <p class="t2">
-        You have 1 document waiting to be verified. We will process this
-        document as soon as possible.
-      </p>
+      <p class="t3">Certification completed</p>
     </div>
     <!-- 6 -->
-    <div v-if="status === 1" class="s1">
+    <div v-if="status === 12" class="s1 s">
       <p class="t1">Phone number Verification</p>
-      <p class="t2">
-        You have 1 document waiting to be verified. We will process this
-        document as soon as possible.
-      </p>
+      <p class="t3">Certification completed</p>
     </div>
     <!-- <div v-if="status === 1"></div> -->
+    <div v-if="status === 1" class="s1 b">
+      <p class="t1">Phone number Verification</p>
+      <p class="t3">Certification rejected</p>
+      <el-button class="sub">SUBMIT</el-button>
+    </div>
+    <!-- 6 -->
+    <div v-if="status === 1" class="s1 b">
+      <p class="t1">Phone number Verification</p>
+      <p class="t3">Certification completed</p>
+      <el-button class="sub">SUBMIT</el-button>
+    </div>
   </div>
 </template>
 <script setup>
@@ -291,6 +296,32 @@ const input3 = ref("");
       color: #666666;
       line-height: 26px;
       margin: 26px 0 0 100px;
+    }
+    .t3 {
+      font-size: 22px;
+      font-family: Arial-BoldMT, Arial;
+      font-weight: normal;
+      color: #b60038;
+      line-height: 26px;
+      margin: 26px 0 0 100px;
+    }
+  }
+  .s1.s {
+    height: 134px;
+  }
+  .s1.b {
+    height: 194px;
+    .sub {
+      width: 160px;
+      height: 48px;
+      background: #b60038;
+      border-radius: 48px;
+      font-size: 18px;
+      font-family: Arial-BoldMT, Arial;
+      font-weight: normal;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      margin: 16px 0 0 131px;
     }
   }
 }

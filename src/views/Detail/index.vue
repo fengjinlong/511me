@@ -6,6 +6,7 @@
     <VipDialog v-model="dialogVisibleVip" />
     <CertifyDialog v-model="dialogVisibleCertify" />
     <VerifyDialog v-model="dialogVisibleVerify" />
+    <ProfileDialog v-model="profileDialogVerify" />
     <div class="check">
       <div class="content">
         <div class="image">
@@ -247,6 +248,7 @@ import ReportDialog from "./reportDialog.vue";
 import VipDialog from "./vipDialog.vue";
 import CertifyDialog from "./certifyDialog.vue";
 import VerifyDialog from "./verifyDialog.vue";
+import ProfileDialog from "./profileDialog.vue";
 import { Search, ArrowRight, ArrowLeft } from "@element-plus/icons-vue";
 // const store = useStore();
 const arr = [1, 1, 1, 1];
@@ -254,10 +256,11 @@ const slideToClicked = (e, r) => {
   console.log("e", e.activeIndex);
 };
 
+const profileDialogVerify = ref(true);
 const centerDialogVisible = ref(false);
 const dialogVisibleVip = ref(false);
 const dialogVisibleCertify = ref(false);
-const dialogVisibleVerify = ref(true);
+const dialogVisibleVerify = ref(false);
 </script>
 <style lang="scss" scoped>
 .home {

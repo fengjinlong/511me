@@ -102,7 +102,6 @@ const jump = () => {
   /* height: 23px; */
   overflow-wrap: break-word;
   font-size: 8px;
-  zoom: 0.83;
   font-family: ArialMT;
   text-align: left;
   line-height: 13px;
@@ -138,6 +137,5 @@ const jump = () => {
   font-size: 8px;
   color: #b60038;
   line-height: 9px;
-  zoom: 0.67;
 }
 </style>

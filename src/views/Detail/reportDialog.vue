@@ -1,5 +1,5 @@
 <template>
-  <el-dialog class="dialogrep" v-model="centerDialogVisible" width="293" center>
+  <el-dialog class="dialogrep" v-model="centerDialogVisible" width="380" center>
     <img src="../../assets/home/rep.png" alt="" />
     <p class="p">Report Member</p>
     <p class="p1">
@@ -76,66 +76,65 @@ const options = [
     padding-top: 0;
   }
   img {
-    width: 59px;
-    height: 56px;
+    width: 76px;
+    height: 73px;
     display: block;
     margin: 0 auto;
   }
   .p {
-    height: 12px;
-    font-size: 11px;
+    padding: 14px 0 16px 0;
+    text-align: center;
+    height: 17px;
+    font-size: 16px;
     font-family: Arial-BoldMT, Arial;
     font-weight: normal;
     color: #000000;
-    line-height: 13px;
-    padding: 11px 0 14px 0;
-    text-align: center;
+    line-height: 18px;
   }
   .p1 {
-    // height: 48px;
-    font-size: 9px;
+    height: 70px;
+    font-size: 12px;
     font-family: ArialMT;
     color: #333333;
-    line-height: 14px;
-    zoom: 0.75;
+    line-height: 15px;
+    // height: 48px;
   }
   .sel {
-    height: 30px;
+    height: 39px;
     background: #f4f4f4;
     border-radius: none;
-    border: 1px solid #eaeaea;
-    margin-top: 16px;
+    margin-top: 15px;
     ::v-deep .el-input__wrapper {
-      height: 30px;
+      height: 39px;
     }
   }
 
   .p2 {
-    height: 12px;
-    font-size: 11px;
+    height: 17px;
+    font-size: 16px;
     font-family: Arial-BoldMT, Arial;
     font-weight: normal;
     color: #000000;
-    line-height: 13px;
-    padding: 14px 0 7px 0;
+    line-height: 18px;
+    padding: 17px 0 9px 0;
   }
   .area {
-    height: 61px;
+    height: 79px;
     background: #f4f4f4;
 
-    border: 1px solid #eaeaea;
+    // border: 1px solid #eaeaea;
     ::v-deep .el-textarea__inner {
       width: 100%;
       border-radius: inherit;
-      height: 61px;
-      font-size: 12px;
+      height: 79px;
+      font-size: 14px;
     }
   }
   .dialog-btn {
-    width: 197px;
-    height: 25px;
+    width: 256px;
+    height: 41px;
+    border-radius: 2px;
     background: #b60038;
-    border-radius: 27px;
     font-size: 9px;
     font-family: Arial-BoldMT, Arial;
     font-weight: normal;

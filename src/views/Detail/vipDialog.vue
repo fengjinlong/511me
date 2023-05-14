@@ -2,7 +2,7 @@
   <el-dialog
     class="dialogvip"
     v-model="centerDialogVisible"
-    width="563"
+    width="686"
     :show-close="false"
     center
   >
@@ -75,104 +75,102 @@ const options = [
       display: flex;
       align-items: center;
       .element {
-        width: 154px;
-        height: 221px;
+        width: 198px;
+        height: 285px;
         background: #ffffff;
-        border-radius: 3px;
+        border-radius: 4px;
         border: 1px solid transparent;
-        // border: 1px solid #eaeefb;
         p {
           text-align: center;
         }
         .p1 {
-          height: 15px;
-          font-size: 14px;
+          height: 20px;
+          font-size: 18px;
           font-family: Arial-BoldMT, Arial;
           font-weight: normal;
           color: #b60038;
-          line-height: 16px;
-          margin-top: 23px;
+          line-height: 20px;
+          padding-top: 30px;
         }
         .p2 {
-          height: 15px;
-          font-size: 22px;
+          height: 19px;
+          font-size: 29px;
           font-family: Arial-BoldMT, Arial;
           font-weight: normal;
           color: #000;
-          line-height: 15px;
-          margin: 13px 0 17px 0;
+          line-height: 19px;
+          margin: 17px 0 22px 0;
         }
         .line {
-          width: 131px;
+          width: 170px;
           height: 1px;
           background: #e8edfa;
-          // zoom: 0.5;
           margin: 0 auto;
         }
         .p3 {
-          height: 15px;
-          font-size: 9px;
+          margin: 12px 0 14px 0;
+          height: 16px;
+          font-size: 12px;
           font-family: PingFangSC-Regular, PingFang SC;
           font-weight: 400;
           color: #999990;
-          line-height: 12px;
-          margin: 9px 0;
-          zoom: 0.8;
+          line-height: 16px;
         }
         .p4 {
-          height: 19px;
-          font-size: 14px;
+          margin-bottom: 18px;
+          height: 25px;
+          font-size: 18px;
           font-family: Arial-BoldItalicMT, Arial;
           font-weight: normal;
           color: #b60038;
-          line-height: 16px;
-          margin-bottom: 12px;
+          line-height: 20px;
         }
         .p5 {
-          height: 15px;
-          font-size: 9px;
+          margin-bottom: 24px;
+          height: 16px;
+          font-size: 12px;
           font-family: PingFangSC-Regular, PingFang SC;
           font-weight: 400;
           color: #999990;
-          margin-bottom: 18px;
-          zoom: 0.8;
+          line-height: 16px;
         }
         .btn {
-          width: 120px;
-          height: 31px;
-          background: #b60038;
-          border-radius: 6px;
-          font-size: 9px;
-          font-family: Arial-BoldMT, Arial;
-          color: #ffffff;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
           display: block;
           margin: 0 auto;
-          zoom: 0.8;
+          width: 124px;
+          height: 33px;
+          background: #b60038;
+          border-radius: 2px;
+
+          font-size: 15px;
+          font-family: Arial-BoldMT, Arial;
+          font-weight: normal;
+          color: #ffffff;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
       }
       .element.year {
         position: relative;
         span {
           position: absolute;
-          width: 80px;
-          height: 28px;
           background: #b60038;
-          border-radius: 13px;
           font-size: 10px;
           font-family: Arial-BoldItalicMT, Arial;
           font-weight: normal;
           color: #ffffff;
           line-height: 28px;
           text-align: center;
-          zoom: 0.8;
           top: -14px;
           left: 57px;
+
+          width: 83px;
+          height: 29px;
+          border-radius: 15px;
         }
       }
       .element.active {
         border: 1px solid #eaeefb;
-        box-shadow: 0px 1px 14px 0px rgba(232, 237, 250, 1);
+        box-shadow: 0px 2px 17px 0px rgba(232, 237, 250, 1);
       }
     }
   }

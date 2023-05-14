@@ -53,13 +53,13 @@ import { computed } from "vue";
   mini-width: 1080px;
   background-color: #b60038;
   .context {
-    width: 786px;
-    height: 33px;
+    width: 1080px;
+    height: 50px;
     margin: 0 auto;
     // display: flex;
     .logo {
-      width: 91px;
-      height: 27px;
+      width: 119px;
+      height: 35px;
       background: url(../../assets/index/logo.png) no-repeat;
       background-size: cover;
       float: left;
