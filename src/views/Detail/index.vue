@@ -2,11 +2,11 @@
   <div class="home">
     <Header />
 
-    <ReportDialog v-model="centerDialogVisible" />
+    <!-- <ReportDialog v-model="centerDialogVisible" />
     <VipDialog v-model="dialogVisibleVip" />
     <CertifyDialog v-model="dialogVisibleCertify" />
     <VerifyDialog v-model="dialogVisibleVerify" />
-    <ProfileDialog v-model="profileDialogVerify" />
+    <ProfileDialog v-model="profileDialogVerify" /> -->
     <div class="check">
       <div class="content">
         <div class="image">
@@ -244,11 +244,11 @@ import { computed, ref } from "vue";
 // import { useStore } from "vuex";
 import Header from "../Home/Header.vue";
 import Item from "../Home/Item.vue";
-import ReportDialog from "./reportDialog.vue";
-import VipDialog from "./vipDialog.vue";
-import CertifyDialog from "./certifyDialog.vue";
-import VerifyDialog from "./verifyDialog.vue";
-import ProfileDialog from "./profileDialog.vue";
+// import ReportDialog from "./reportDialog.vue";
+// import VipDialog from "./vipDialog.vue";
+// import CertifyDialog from "./certifyDialog.vue";
+// import VerifyDialog from "./verifyDialog.vue";
+// import ProfileDialog from "./profileDialog.vue";
 import { Search, ArrowRight, ArrowLeft } from "@element-plus/icons-vue";
 // const store = useStore();
 const arr = [1, 1, 1, 1];

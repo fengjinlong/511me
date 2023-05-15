@@ -1,13 +1,15 @@
+dropdownPop
 <template>
-  <div class="h">
+  <div class="ha">
     <div class="context">
       <div class="logo"></div>
       <ul>
         <li class="item">Online</li>
         <li class="item active">VIP</li>
         <li class="item">Messages</li>
-        <el-dropdown class="drop">
-          <span class="span"> Activity <i>99</i> </span>
+
+        <el-dropdown popper-class="dropDownStyle">
+          <span class="span"> Activity <span class="i">99+</span> </span>
           <template #dropdown>
             <el-dropdown-menu class="dropdownPop">
               <el-dropdown-item>Liked Me<i>2</i></el-dropdown-item>
@@ -18,22 +20,32 @@
           </template>
         </el-dropdown>
       </ul>
-
-      <div class="set"></div>
-      <div class="tick"></div>
-
+      <div style="flex-grow: 1" />
+      <div class="head"><img src="../../assets/header_bg.jpg" alt="" /></div>
       <el-dropdown class="el-menu-demo">
         <span class="el-dropdown-link"> mumu </span>
         <template #dropdown>
-          <el-dropdown-menu class="dropdownPop">
+          <el-dropdown-menu class="dropdownPop1">
             <el-dropdown-item>Action 1</el-dropdown-item>
             <el-dropdown-item>Action 2</el-dropdown-item>
             <el-dropdown-item>Action 3</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-
-      <div class="head"><img src="../../assets/header_bg.jpg" alt="" /></div>
+      <div class="tick"></div>
+      <el-dropdown popper-class="dropDownStyle dropDownStyle2">
+        <span class="set"> </span>
+        <template #dropdown>
+          <el-dropdown-menu class="dropdownPop" slot="dropdown">
+            <el-dropdown-item>Account</el-dropdown-item>
+            <el-dropdown-item>Password</el-dropdown-item>
+            <el-dropdown-item>Notifications</el-dropdown-item>
+            <el-dropdown-item>Feedback</el-dropdown-item>
+            <el-dropdown-item>Contact Support</el-dropdown-item>
+            <el-dropdown-item class="logout">Logout</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
 
       <!-- {{ badgeSystem }} -->
     </div>
@@ -49,32 +61,32 @@ import { computed } from "vue";
 // console.log(badgeSystem.value);
 </script>
 <style lang="scss" scoped>
-.h {
+.ha {
   mini-width: 1080px;
   background-color: #b60038;
   .context {
     width: 1080px;
     height: 50px;
     margin: 0 auto;
-    // display: flex;
+    display: flex;
+    align-items: center;
     .logo {
       width: 119px;
       height: 35px;
       background: url(../../assets/index/logo.png) no-repeat;
       background-size: cover;
-      float: left;
-      margin-right: 40px;
+      margin-top: -10px;
     }
     ul {
       display: flex;
-      width: 300px;
-      float: left;
+      // width: 300px;
+      // float: left;
       li.item {
-        width: 76px;
-        height: 33px;
+        width: 135px;
+        height: 50px;
         color: #fff;
         display: flex;
-        font-size: 11px;
+        font-size: 15px;
         justify-content: center;
         align-items: center;
       }
@@ -88,19 +100,47 @@ import { computed } from "vue";
           background-color: #ca0b46;
         }
       }
-      :deep(.el-dropdown.drop):hover {
-        background-color: #ca0b46;
-        el-dropdown-menu__item:not(.is-disabled) {
-          color: red;
+      // :deep(.el-dropdown.drop):hover {
+      //   background-color: #ca0b46;
+      //   el-dropdown-menu__item:not(.is-disabled) {
+      //     color: red;
+      //   }
+      // }
+    }
+    .el-dropdown {
+      display: flex;
+      align-items: center;
+      .span {
+        color: #fff;
+        width: 135px;
+        height: 25px;
+        color: #fff;
+        display: flex;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        .i {
+          position: absolute;
+          width: 31px;
+          height: 20px;
+          border-radius: 10px;
+          background: #ffffff;
+          color: #ca0b46;
+          right: 5px;
+          top: 8px;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
         }
       }
     }
-    .drop {
-      width: 76px;
-      height: 33px;
-      color: #fff;
+    .dropDownStyle {
+      width: 135px;
+      height: 50px;
       display: flex;
-      font-size: 11px;
+      font-size: 15px;
       justify-content: center;
       align-items: center;
       .span {
@@ -125,7 +165,6 @@ import { computed } from "vue";
       padding: 1px;
       background-color: #fff;
       margin-top: 5px;
-      float: right;
       img {
         display: block;
         width: 100%;
@@ -138,7 +177,6 @@ import { computed } from "vue";
       height: 33px;
       line-height: 33px;
       border: none;
-      float: right;
       color: #fff;
       margin-left: 20px;
       .flex-grow {
@@ -147,14 +185,14 @@ import { computed } from "vue";
       :deep .el-sub-menu__title {
         height: 33px;
         background-color: #b60038;
-        color: #fff;
+        color: #0e9e86;
       }
       .item {
         height: 33px;
-        color: #fff;
+        color: #0b9ba5;
         border: none;
         ::v-deep .el-icon.el-sub-menu__icon-arrow {
-          color: #fff;
+          // color: #13b65a;
         }
       }
       .el-menu-item {
@@ -163,6 +201,7 @@ import { computed } from "vue";
         background-color: #ca0b46;
         position: relative;
         z-index: 9999;
+        border: none;
       }
       .el-menu-item.is-active {
         height: 33px;
@@ -177,7 +216,6 @@ import { computed } from "vue";
     .tick {
       width: 12px;
       height: 14px;
-      float: right;
       background: url(../../assets/home/notice.png) no-repeat;
       background-size: cover;
       margin: 9px;
@@ -185,7 +223,6 @@ import { computed } from "vue";
     .set {
       width: 14px;
       height: 14px;
-      float: right;
       margin: 10px;
       background: url(../../assets/home/set.png) no-repeat;
       background-size: cover;
@@ -195,34 +232,64 @@ import { computed } from "vue";
 </style>
 
 <style lang="scss">
-.dropdownPop {
+.dropDownStyle {
   background-color: #b60038;
-
+  .dropdownPop {
+    background-color: #b60038;
+    border-color: red;
+  }
+  .el-popper__arrow::before {
+    content: "";
+    display: none;
+    background-color: transparent;
+  }
   .el-dropdown-menu__item {
+    width: 117px;
+    height: 31px;
+    padding: 0;
+    background-color: #b60038;
+    padding-left: 18px;
     color: #fff;
-    position: relative;
+
+    border: none;
     i {
-      position: absolute;
-      width: 10px;
-      height: 10px;
+      width: 18px;
+      height: 18px;
       border-radius: 100%;
       background: #ffffff;
       color: #ca0b46;
-      right: 0;
-      top: 0;
       font-size: 12px;
+      margin-left: 4px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #ca0b46;
+      text-align: center;
+      font-style: normal;
+      line-height: 17px;
     }
   }
+
   .el-dropdown-menu__item:hover {
     background-color: #ca0b46;
     color: #fff;
+    border: none;
   }
-  // .popper__arrow {
-  // border: 1px solid #4472cb !important;
-  // }
-  // .popper__arrow::after {
-  //   border-top-color: #46bcff !important;
-  //   border-bottom-color: #46bcff !important;
-  // }
+}
+.dropDownStyle2 {
+  .dropdownPop1 {
+    background-color: #b60038;
+    border-color: red;
+  }
+  .el-dropdown-menu__item {
+    width: 119px;
+    height: 31px;
+    padding: 0;
+    background-color: #b60038;
+    padding-left: 11px;
+  }
+  .el-dropdown-menu__item:last-child {
+    height: 45px;
+    border-top: 1px solid #ffffff;
+  }
 }
 </style>
